@@ -5,7 +5,8 @@ app = Flask(__name__)
 def index():
     return '<h1>Check this amazing web.</h1>'
 
-def user2('/who/<yourname>):
+@app.route('/who/<yourname>')
+def user2(yourname):
     return '<h1>Hello {},have s nice day!</h1>'.format(yourname)
 
 @app.route('/user/<name>')
